@@ -1,0 +1,56 @@
+snippet	<? "PHP Open Tag"
+<?php
+
+endsnippet
+
+snippet	fore "PHP Foreach"
+foreach ($1 as $2)} {
+	$0
+}
+endsnippet
+
+snippet	forek "PHP Foreach ($key => $value)"
+foreach (\$${1:collection} as \$${2:key} => ${3:$value}) {
+$0
+}
+endsnippet
+
+snippet	class "PHP Class"
+/**
+ *
+ */
+class $1
+{
+$0
+}
+endsnippet
+
+snippet	pubf "PHP Public Method"
+/**
+ *
+ */
+public function $1($2)
+{
+	${3:throw new \Exception('Method is	not implemented yet');}
+}
+endsnippet
+
+snippet	pubsf "PHP Public Static Method"
+/**
+ *
+ */
+public static function $1($2)
+{
+	${3:throw new \Exception('Method is	not implemented yet');}
+}
+endsnippet
+
+snippet	privf "PHP Private Method"
+/**
+ *
+ */
+private function $1($2)
+{
+	${3:throw new \Exception('Method is not implemented yet');}
+}
+endsnippet
