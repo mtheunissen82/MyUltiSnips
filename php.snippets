@@ -3,6 +3,13 @@ snippet	<? "PHP Open Tag"
 
 endsnippet
 
+snippet func "PHP Function"
+function ${1:functionName}($2)
+{
+$0
+}
+endsnippet
+
 snippet	fore "PHP Foreach"
 foreach ($1 as $2)} {
 	$0
@@ -16,10 +23,42 @@ $0
 endsnippet
 
 snippet	class "PHP Class"
+<?php
+
+namespace $1;
+
 /**
- *
+ * @package $1
  */
-class $1
+class ${2:ClassName}
+{
+$0
+}
+endsnippet
+
+snippet	aclass "PHP Abstract Class"
+<?php
+
+namespace $1;
+
+/**
+ * @package $1
+ */
+abstract class ${2:AbstractClassName}
+{
+$0
+}
+endsnippet
+
+snippet	iface "PHP Interface"
+<?php
+
+namespace $1;
+
+/**
+ * @package $1
+ */
+interface ${2:InterfaceName}
 {
 $0
 }
@@ -29,7 +68,7 @@ snippet	pubf "PHP Public Method"
 /**
  *
  */
-public function $1($2)
+public function ${1:publicMethodName}($2)
 {
 	${3:throw new \Exception('Method is	not implemented yet');}
 }
@@ -39,7 +78,27 @@ snippet	pubsf "PHP Public Static Method"
 /**
  *
  */
-public static function $1($2)
+public static function ${1:publicStaticMethod}($2)
+{
+	${3:throw new \Exception('Method is	not implemented yet');}
+}
+endsnippet
+
+snippet	prof "PHP Protected Method"
+/**
+ *
+ */
+protected function ${1:protectedMethodName}($2)
+{
+	${3:throw new \Exception('Method is	not implemented yet');}
+}
+endsnippet
+
+snippet	prosf "PHP Protected Static Method"
+/**
+ *
+ */
+protected static function ${1:protectedStaticMethodName}($2)
 {
 	${3:throw new \Exception('Method is	not implemented yet');}
 }
@@ -49,7 +108,7 @@ snippet	privf "PHP Private Method"
 /**
  *
  */
-private function $1($2)
+private function ${1:privateMethodName}($2)
 {
 	${3:throw new \Exception('Method is not implemented yet');}
 }
